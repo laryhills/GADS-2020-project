@@ -15,9 +15,9 @@ In this lab, you will learn how to perform the following tasks:
 1. Create a virtual machine using the Google cloud Platform (GCP) Console.
 
 ```bash
-    gcloud compute instances create my-vm-1 --machine-type "n1-standard-1" --image "debian-9-stretch-v20200805" --image-project "debian-cloud" --subnet "default" --tags http
+    gcloud compute instances create my-vm-1 --machine-type "n1-standard-1" --image "debian-9-stretch-v20200902" --image-project "debian-cloud" --subnet "default" --tags http
 
-    gcloud compute firewall-rules create default-allow-http --destination=INGRESS --network=default --action=ALLOW --rules=tcp:80 --source-ranges=0.0.0.0/0 --target-tags=http
+    gcloud compute firewall-rules create default-allow-http --direction=INGRESS --network=default --action=ALLOW --rules=tcp:80 --source-ranges=0.0.0.0/0 --target-tags=http
 ```
 
 2. Create a Computer Engine virtual machine using the gcloud command-line interface.
